@@ -23,6 +23,8 @@ Route::get('/admin', function () {
     return view('welcome');
 });
 
+// Route::middleware([])
+
 Auth::routes();
 
 Route::middleware(['auth', 'role:admin', 'verified'])->group(function () {
